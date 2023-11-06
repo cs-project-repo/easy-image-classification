@@ -11,8 +11,11 @@ import os
 import copy
 from PIL import Image
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+src_dir = os.path.dirname(current_dir)
+
 class EasyImageClassifier:
-  def __init__(self, data='../data', model_type='resnet101', num_epochs=25, lr=0.001, step_size=7, gamma=0.1, momentum=0.9):
+  def __init__(self, data=os.path.join(src_dir, 'data'), model_type='resnet101', num_epochs=25, lr=0.001, step_size=7, gamma=0.1, momentum=0.9):
     self.data = data
     self.model_type = model_type
     self.num_epochs = num_epochs
@@ -161,7 +164,7 @@ class EasyImageClassifier:
   def save_model(self, model, save_path):
     torch.save(model, save_path)
 
-  def predict_image(self, model, image="../data/predict/oranges-in-a-box.jpg"):
+  def predict_image(self, model, image=os.path.join(src_dir, 'data', 'path', "oranges-in-a-box.jpg")):
     model = torch.load(model, map_location=self.device).to(self.device)
     model.eval()
 
@@ -182,7 +185,7 @@ class EasyImageClassifier:
 
     print("Prediction: ", predicted_class)
 
-  def predict_images(self, model, images='../data/predict'):
+  def predict_images(self, model, images=os.path.join(src_dir, 'data', 'path')):
     model = torch.load(model, map_location=self.device).to(self.device)
     model.eval()
 
