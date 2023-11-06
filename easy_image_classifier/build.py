@@ -162,7 +162,13 @@ class EasyImageClassifier:
     return model
 
   def save_model(self, model, save_path):
-    torch.save(model, save_path)
+    directory_path = os.path.dirname(save_path)
+    if not os.path.exists(directory_path):
+        print("Creating folder: ", directory_path)
+        os.makedirs(directory_path)
+        torch.save(model, save_path)
+    else:
+        torch.save(model, save_path)
 
   def predict_image(self, model, image=os.path.join(src_dir, 'easy_image_classifier', 'data', 'predict', 'oranges-in-a-box.jpg')):
     model = torch.load(model, map_location=self.device).to(self.device)
@@ -185,7 +191,7 @@ class EasyImageClassifier:
 
     print("Prediction: ", predicted_class)
 
-  def predict_images(self, model, images=os.path.join(src_dir, 'easy_image_classifier' 'data', 'path')):
+  def predict_images(self, model, images=os.path.join(src_dir, 'easy_image_classifier', 'data', 'predict')):
     model = torch.load(model, map_location=self.device).to(self.device)
     model.eval()
 
