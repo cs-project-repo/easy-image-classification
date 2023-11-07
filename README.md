@@ -14,7 +14,7 @@ from easy_image_classifier import EasyImageClassifier
 
 Usage
 
-To get started with the Easy Image Classifier, I've prepared a step-by-step guide in a Google Colab notebook. This notebook demonstrates how to train image classification models and make predictions using the Easy Image Classifier library. Follow this link to access the Google Colab notebook: [Google Colab](https://colab.research.google.com/drive/1e7R_e-sF01YC2-h4elJvUpqANEoXTlJb#scrollTo=jS63LAedD6Ug)
+To get started with the Easy Image Classifier, I've prepared a step-by-step guide in a Google Colab notebook. This notebook demonstrates how to train image classification models and make predictions using the Easy Image Classifier library. Follow this link to access the Google Colab notebook: [Google Colab](https://colab.research.google.com/drive/1e7R_e-sF01YC2-h4elJvUpqANEoXTlJb)
 
 Params
 
