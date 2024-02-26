@@ -1,10 +1,10 @@
-Easy Image Classifier
+# Easy Image Classifier
 
-Introduction
+## Introduction
 
 The Easy Image Classifier is a Python library that simplifies the process of training and using image classification models. It provides a straightforward way to train a deep learning model for image classification and to make predictions on new images using the trained model. 
 
-Installation
+## Installation
 
 You can use the Easy Image Classifier by cloning the GitHub repository and importing the EasyImageClassifier class into your project.
 
@@ -12,11 +12,11 @@ You can use the Easy Image Classifier by cloning the GitHub repository and impor
 from easy_image_classifier import EasyImageClassifier
 ```
 
-Usage
+## Usage
 
 To get started with the Easy Image Classifier, I've prepared a step-by-step guide in a Google Colab notebook. This notebook demonstrates how to train image classification models and make predictions using the Easy Image Classifier library. Follow this link to access the Google Colab notebook: [Google Colab](https://colab.research.google.com/drive/1e7R_e-sF01YC2-h4elJvUpqANEoXTlJb)
 
-Params
+## Params
 
 Here are the parameters you can customize when using the Easy Image Classifier:
 
@@ -30,7 +30,7 @@ Here are the parameters you can customize when using the Easy Image Classifier:
 | gamma         | float      | 0.1       | Multiplicative factor for learning rate decay. |
 | momentum      | float      | 0.9       | Momentum for Stochastic Gradient Descent (SGD) optimizer. |
 
-Data Folder Requirements*
+## Data Folder Requirements*
 
 To effectively use the Easy Image Classifier, if you are using your own data, ensure your data is structured as follows:
 
